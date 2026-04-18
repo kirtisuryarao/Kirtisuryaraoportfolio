@@ -75,6 +75,28 @@ const projectsData: Project[] = [
     }
   },
   {
+    id: "used-car-analysis",
+    title: "Used Car Price Analysis & Dashboard",
+    description: "Analyzed 370K+ used car listings to identify pricing trends and key factors like vehicle type, fuel, and gearbox. Performed data cleaning, outlier removal, and feature transformation, and built an interactive Streamlit dashboard for data-driven insights.",
+    categories: ["Data Science", "AI/ML"],
+    techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Streamlit"],
+    featured: true,
+    githubUrl: "https://github.com/kirtisuryarao/Dataanalysis-of-used-car.git",
+    demoUrl: "https://dataanalysis-of-used-car.streamlit.app/",
+    details: {
+      problemStatement: "Large, messy dataset with missing values and inconsistent entries making pricing trend analysis difficult.",
+      solutionApproach: "Cleaned data, applied IQR for outlier removal, performed EDA, and built an interactive Streamlit dashboard.",
+      features: [
+        "Data cleaning and outlier removal using IQR",
+        "Feature transformation and engineering",
+        "Exploratory Data Analysis (EDA) of 370K+ listings",
+        "Interactive Streamlit dashboard for data-driven insights"
+      ],
+      challenges: "Handling messy data, inconsistencies, and accurately detecting and managing extreme outliers in pricing.",
+      outcome: "Provided actionable insights into pricing trends to support data-driven decisions."
+    }
+  },
+  {
     id: "bookmydoc",
     title: "BookMyDoc – Doctor Appointment System",
     description: "Secure health platform with JWT authentication, real-time scheduling, and advanced search filters.",
@@ -142,7 +164,7 @@ const projectsData: Project[] = [
   }
 ];
 
-const filters = ["All", "AI/ML", "Web", "Systems"];
+const filters = ["All", "AI/ML", "Data Science", "Web", "Systems"];
 
 // Card Component with cursor glow effect
 const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => void }) => {

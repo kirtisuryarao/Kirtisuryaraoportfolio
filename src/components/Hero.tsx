@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Download, ExternalLink } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const GithubIcon = ({ size = 24 }: { size?: number }) => (
@@ -130,7 +131,9 @@ export default function Hero() {
             <motion.a
                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.7)" }}
                whileTap={{ scale: 0.95 }}
-               href="#resume"
+               href="https://drive.google.com/drive/folders/18byEzSLCaqilpiHA7v7DKC_ucQ0H_ENO?usp=sharing"
+               target="_blank"
+               rel="noopener noreferrer"
                className="flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 bg-white/50 backdrop-blur-md text-slate-800 border border-white/60 rounded-2xl font-semibold shadow-sm transition-all"
             >
               <span>Download Resume</span>
@@ -176,13 +179,13 @@ export default function Hero() {
             {/* Glassmorphism Card Wrapper */}
             <div className="relative z-10 p-4 bg-white/20 backdrop-blur-xl rounded-[2.5rem] border border-white/40 shadow-2xl">
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-[2rem] overflow-hidden bg-slate-100 relative border border-white/30 shadow-inner">
-                {/* Fallback image placeholder if no image is present */}
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-soft/40 to-slate-100 flex flex-col items-center justify-center text-slate-400">
-                  <svg className="w-20 h-20 mb-4 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                  <span className="font-medium">Profile Image</span>
-                </div>
+                <Image
+                  src="/1776503068749.png"
+                  alt="Kirti Suryarao"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
             
